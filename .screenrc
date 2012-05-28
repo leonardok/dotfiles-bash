@@ -1,0 +1,20 @@
+# blue and yellow bar, with hour date and windows.
+msgwait 1
+# sorendition 05 43
+# hardstatus alwayslastline " %c | %Y%m%d |  %w"
+# green and black bar, with codes of lateral codes.
+# hardstatus alwayslastline "\033[m\033[42;30m%c\033[m \033[42;30m%Y%m%d\033[m \033[42;30m %w \033[m"
+# this is hot!!
+hardstatus on
+hardstatus alwayslastline "%w"
+hardstatus string "%{.b }%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %c%a "
+defscrollback 1024
+caption string "%?%F%{.B.}%?%t%?"
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I" 
+# tell screen how to set colors. AB = background, AF=foreground 
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+# erase background with current bg color 
+defbce on 
