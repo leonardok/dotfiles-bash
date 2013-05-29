@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-ln -s ~/.screenrc $(pwd)/.screenrc
-ln -s ~/.bashrc $(pwd)/.bash
-ln -s ~/.bash_profile $(pwd)/.bash_profile
+ln -s $(pwd)/screenrc ~/.screenrc
+ln -s $(pwd)/bashrc ~/.bashrc
+ln -s $(pwd)/bash_profile ~/.bash_profile
