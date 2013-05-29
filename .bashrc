@@ -31,3 +31,6 @@ export PATH="$PATH:~/bin/"
 
 
 set -o vi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
