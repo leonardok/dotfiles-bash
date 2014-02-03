@@ -1,3 +1,27 @@
 [user]
 	email = leokorndorfer@gmail.com
 	name = Leonardo Korndörfer
+
+[credential]
+	helper = cache --timeout 92000
+
+[core]
+        editor = vim
+
+[help]
+        autocorrect = 1
+
+[push]
+        default = tracking
+
+[branch "master"]
+        rebase = true
+
+[alias]
+        st = status -sb         # smarter status - include tag and branch info
+        fup = log --since '1 day ago' --oneline --author <YOUR_EMAIL>  # I know what you did yesterday - great for follow-ups
+        ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short  # pretty one-line log with tags, branches and authors
+        lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat    # a verbose ls, shows changed files too
+
+[color]
+        ui = true
