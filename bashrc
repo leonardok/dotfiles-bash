@@ -1,10 +1,7 @@
 # ~/.bashrc - Leonardo Korndorfer
 
-function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(b:\1)/'
-}
 
-PS1='\[\e[1;34m\][\[\e[1;32m\]\u@\h \[\e[1;31m\]\w \[\e[1;34m\]]$(parse_git_branch)\$\[\e[0m\] \n'
+PS1='\[\e[1;34m\][\[\e[1;32m\]\u@\h \[\e[1;31m\]\w \[\e[1;34m\]]$(__git_ps1)\$\[\e[0m\] \n'
 
 # Set appropriate ls alias
 case $(uname -s) in
@@ -34,3 +31,5 @@ set -o vi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+source /etc/bash_completion.d/git
